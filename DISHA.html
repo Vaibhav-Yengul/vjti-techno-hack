@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Disha</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="826335690434-5pp8e2169c0et39tidq6kqaah58ibdva.apps.googleusercontent.com">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  </head>
+
+
+<body> 
+
+<div class="container">
+<div class="jumbotron">
+    <h1>DISHA</h1>
+    <p>Sign up/Sign in</p>
+   
+	<div class="g-signin2" data-onsuccess="onSignIn"></div>
+</div>
+
+<div class="jumbotron">
+<h2>Problem Statement</h2>
+<br />
+Worldwide more than 44 million people are suffering from Dementia and in 60-80% of cases cause of Dementia is Alzheimer's disease. 
+58% of the people suffering from dementia live in developing countries where they do not have access to smartphones and even if they have 
+they do not have access to high speed internet connection.<br />The major problems faced by people suffering from Dementia is their loss of
+navigational capabilities due to loss of memory and can easily get confused with lane numbers and forget their way back home.	
+</div>
+
+<div class="jumbotron">
+<h2>Solution</h2>
+<br />
+We created Disha wristband for people suffering from Dementia and diseases like Alzheimer to help them navigate back to home when they forget their path.
+The wristband consists of an on-board GPS receiver which would constantly acquire the geographical co-ordinates of the user.
+If the user crosses a geo-fence (pre-defined by the user's family), a warning SMS notification is transmitted to the phone
+of the user's family members 
+and the location of the user is then displayed onto a real-time tracker (accessible both through a website as well as on an Android app) that can help 
+the family members in tracking down the user in real-time.
+The wristband also consists of a Panic button which can be pressed by the user to manually notify 
+their family that they lost their path (even if the user is within the geo-fence) and also trigger a notification onto the smartphone of the user's family 
+members about his/her present co-ordinates and help the family members in tracking the user and locating him/her.
+The wristband is designed in a way such that 
+the User Interface is smooth and easy to use. It also gives haptic and auditory feedback to the user to help them while navigating way back home. We also 
+have an Android app to help visualize the location of the user on a map and track them in real-time.
+</div>
+
+</div>
+
+</body>
+<script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log("Name: " + profile.getName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+</script>
+</html>
